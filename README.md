@@ -76,5 +76,3 @@ It follows that $v^T Q v\ =\ v^T Sym(Q) v$
 
 Therefore $argmax_{v\ \in\ S^n}\ v^T Q v$ is simply the eigenvector corresponding to the largest eigenvalue of $Sym(Q)$.
 
-
-### The Practice
