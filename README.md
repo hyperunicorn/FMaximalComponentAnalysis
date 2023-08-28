@@ -23,14 +23,21 @@ max_pos: Maximises the variance of the positive samples divided by the variance 
 as_df: If true, passes the decomposed dataset as a df. Otherwise, passes it as a numpy matrix.
 
 We can fit this object to a dataset with the standard sklearn idiom:
+
 `fmc.fit(X, y)`
+
 Where X is a 2-dimensional array and y is a 1-dimensional vector with exactly two unique values
 
 Then we can obtain a dimensionally reduced matrix in the maximised components with:
+
 `rotated = fmc.transform(X, y=None) `
+
 Where X is the same above, if y is not None then y will be simply be appended to the resulting df/np in the same order that it was passed
 You can also access the entire eigenspectrum with through the spec attribute
-Which is an array of tuples of the form `(eigenvalue, eigenvector)`
+Which is an array of tuples of the form 
+
+`(eigenvalue, eigenvector)`
+
 ### The Theory
 In PCA, you try to find a basis vector that contains as much of the overall variance of the data set as possible. In FMCA, we pursue a similar but more complex strategy. Let $X_0,\ X_1 \in \mathbb{R}^n$ be vector-valued random variables such that 
 
