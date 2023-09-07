@@ -10,10 +10,14 @@ def cdot(l1, l2):
 def safe_cast(mat):
     """Check if matrix is compatible with the numpy array format and then cast it to that format if it has not already been."""
     if type(mat) != np.ndarray:
+        out = np.array(mat)
+        print(out.shape)
         try:
-            return np.array(mat)
+            len(out)
         except:
-            raise RuntimeError(f"Data of type {type(mat)} cannot be cast to numpy array.")
+            raise RuntimeError("Data cannot be cast to numpy array.")
+        else:
+            return out
     else:
         return mat
         
