@@ -3,7 +3,7 @@ import utils as ut
 import pytest
 import numpy as np
 import pandas as pd
-
+import warnings
 class TestUtils:
     def test_safe_cast_good_input(self):
         assert True == np.equal(ut.safe_cast([1,2,3]), np.array([1,2,3]))[0]
