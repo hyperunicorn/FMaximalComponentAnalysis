@@ -33,7 +33,7 @@ Then we can obtain a dimensionally reduced matrix in the maximised components wi
 `rotated = fmc.transform(X, y=None) `
 
 Where X is the same above, if y is not None then y will be simply be appended to the resulting df/np in the same order that it was passed
-You can also access the entire eigenspectrum with through the spec attribute
+You can also access the entire eigenspectrum with the spec attribute
 Which is an array of tuples of the form 
 
 `(eigenvalue, eigenvector)`
